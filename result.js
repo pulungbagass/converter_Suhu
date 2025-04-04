@@ -9,31 +9,31 @@ const resultKelvin = document.querySelector(".Kelvin span");
 
 // Fungsi konversi suhu
 function convertTemperature(value, fromUnit, decimalPlaces) {
-    let celsius;
+    let Suhu;
 
     // Konversi ke Celsius sebagai basis
     switch (fromUnit) {
         case "celsius":
-            celsius = value;
+            Suhu = value;
             break;
         case "fahrenheit":
-            celsius = (value - 32) * (5 / 9);
+            Suhu = (value - 32) * (5 / 9);
             break;
         case "reamur":
-            celsius = value * (5 / 4);
+            Suhu = value * (5 / 4);
             break;
         case "kelvin":
-            celsius = value - 273.15;
+            Suhu = value - 273.15;
             break;
         default:
             throw new Error("Invalid unit");
     }
 
-    // Konversi dari Celsius ke unit lain
-    const fahrenheit = (celsius * (9 / 5) + 32).toFixed(decimalPlaces);
-    const reamur = (celsius * (4 / 5)).toFixed(decimalPlaces);
-    const kelvin = (celsius + 273.15).toFixed(decimalPlaces);
-    const roundedCelsius = celsius.toFixed(decimalPlaces);
+    // Konversi dari Suhu ke unit lain
+    const fahrenheit = (Suhu * (9 / 5) + 32).toFixed(decimalPlaces);
+    const reamur = (Suhu * (4 / 5)).toFixed(decimalPlaces);
+    const kelvin = (Suhu + 273.15).toFixed(decimalPlaces);
+    const roundedCelsius = Suhu.toFixed(decimalPlaces);
 
     return { celsius: roundedCelsius, fahrenheit, reamur, kelvin };
 }
