@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convert Suhu</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleSuhu.css" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
     <div class="container">
-        <h1>Convert Suhu</h1>
+      <h1>Temperature Converter</h1>
+      <div class="form-group">
+        <label for="temperatureInput">Enter Temperature:</label>
+        <input
+          type="number"
+          id="temperatureInput"
+          placeholder="Enter value..."
+        />
+      </div>
+      <div class="form-group">
+        <label for="unitInput">Select Suhu:</label>
+        <select id="unitInput">
+          <option value="celsius">Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="reamur">Reamur</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="decimalInput">Adjust Decimal :</label>
+        <input
+          type="number"
+          id="decimalInput"
+          placeholder="Number of decimals..."
+        />
+      </div>
+      <div class="form-group">
+        <button type="button" id="convertButton">Convert</button>
+      </div>
     </div>
-</body>
+
+    <div class="results">
+      <div class="Celcius" id="result">
+        <span>Celcius :</span>
+      </div>
+      <div class="Fahrenheit" id="result">
+        <span>Fahrenheit :</span>
+      </div>
+      <div class="Reamur" id="result">
+        <span>Reamur :</span>
+      </div>
+      <div class="Kelvin" id="result">
+        <span>Kelvin :</span>
+      </div>
+    </div>
+
+    <script src="result.js"></script>
+  </body>
 </html>

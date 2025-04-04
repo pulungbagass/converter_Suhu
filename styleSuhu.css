@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Agar kontainer berada di tengah layar */
+    /* height: 100vh;  */
+}
+
+.container {
+    /* border: 2px solid #eeeeee; */
+    margin: 20px;
+}
+
+h1 {
+    color: #007BFF; /* Biru untuk judul */
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+}
+
+.form-group {
+    /* margin-bottom: 15px; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF5733; /* Oranye untuk label */
+}
+
+input, select {
+    width: auto;
+    padding: 10px;
+    margin: 10px 50px;
+    border: 1px solid #007BFF; /* Biru untuk border */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2); /* Efek bayangan */
+}
+
+button {
+    background-color: #007BFF; /* Biru untuk tombol */
+    color: white;
+    padding: 10px 15px;
+    margin: 0 60px ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat hover */
+    margin: 0px 58px ;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom (2x2 layout) */
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 10px ;
+    max-width: 600px;
+    width: 90%; /* Responsif dengan layar */
+    /* background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+#result {
+    /* Biru untuk elemen */
+    background-color: #007BFF; 
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Media Query untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+    .results {
+        grid-template-columns: 1fr; /* Ubah menjadi satu kolom */
+        
+    }
+
+    #result {
+        margin: 0px 30px ;
+        padding: 30px 0px;
+    }
+}   
